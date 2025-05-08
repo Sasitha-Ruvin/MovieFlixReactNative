@@ -6,10 +6,14 @@ import { fetchMovies } from "@/services/api";
 import useFetch from "@/services/useFetch";
 import { useRouter } from "expo-router";
 import { ActivityIndicator, FlatList, Image, ScrollView, Text, View } from "react-native";
+import {useEffect} from "react";
 
 export default function Index() {
     const router = useRouter();
-    const {data:movies, loading:moviesLoding, error:moviesError} = useFetch(() => fetchMovies({
+    const {
+        data:movies,
+        loading:moviesLoding,
+        error:moviesError} = useFetch(() => fetchMovies({
         query:''
     }))
   return (
