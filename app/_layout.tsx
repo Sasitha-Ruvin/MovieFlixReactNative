@@ -1,5 +1,5 @@
 import { Stack } from "expo-router";
-import './globals.css'
+import './globals.css';
 export default function RootLayout() {
   return <Stack>
     <Stack.Screen
@@ -7,7 +7,7 @@ export default function RootLayout() {
       options={{headerShown:false}}
     />
     <Stack.Screen
-      name="movie/[id]"
+      name="movies/[id]"
       options={{headerShown:false}}
     />
   </Stack>
